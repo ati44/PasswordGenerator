@@ -28,8 +28,6 @@ export class AppComponent {
     const letter = 'qwertyuıopasdfghjklşizxcvbnmöç';
     const symbol = '!^+%&/()=?';
 
-    
-
     if (this.selectNumber) {
       this.degerata += number;
     }
@@ -45,9 +43,7 @@ export class AppComponent {
       const i = Math.floor(Math.random() * this.degerata.length)
       generatePassword += this.degerata[i];
     }
-
     this.password = generatePassword;
-
   }
   onChangeNumber() {
     this.selectNumber = !this.selectNumber;
@@ -59,7 +55,5 @@ export class AppComponent {
     this.selectSymbol = !this.selectSymbol;
   }
 
-
-
-
 }
+

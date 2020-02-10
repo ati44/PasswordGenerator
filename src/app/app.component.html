@@ -1,45 +1,40 @@
-<div>
+<div class="container">
+  <h1 class="header">Passwor Generator</h1>
+  <div class="field">
+    <div class="control">
+      <label class="label" for="">Enter Password Length</label>
+      <input class="text" type="text" (input)="enterLength($event.target.value)">
+    </div>
 
-  <h1>Passwor Generator</h1>
-  <div>
-    
-      <div>
-        <label for="">Enter Password Length</label>
-        <input type="text" (input)="enterLength($event.target.value)">
+    <div class="field">
+      <div class="control">
+        <label class="checkbox">
+          <input (change)="onChangeNumber()" type="checkbox">
+          Add Number </label>
       </div>
-      <div>
-        <label for="">Add Number</label>
-        <input type="checkbox" (change)="onChangeNumber()">
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input (change)="onChangeLetter()" type="checkbox">
+            Add Number </label>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label class="checkbox">
+              <input (change)="onChangeSymbol()" type="checkbox">
+              Add Number </label>
+          </div>
+
+          <div class="control">
+            <button class="button is-link" [disabled]="!(length && (selectLetter || selectNumber || selectSymbol))"
+              (click)="onGenerate()">Generate</button>
+              <br>
+
+            <h1>{{password}}</h1>
+          </div>
+
+
+        </div>
+
+
       </div>
-      <div>
-        <label for="">Add Letter</label>
-        <input type="checkbox" (change)="onChangeLetter()">
-      </div>
-      <div>
-        <label for="">Add Symbol</label>
-        <input type="checkbox" (change)="onChangeSymbol()">
-      </div>
-      <div>
-        <button [disabled]="!(length && (selectLetter || selectNumber || selectSymbol))" (click)="onGenerate()">Generate</button>
-        <br>
-        <input [value]="password" type="text">
-      </div>
-
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
